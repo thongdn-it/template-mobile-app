@@ -1,4 +1,5 @@
 {
   "name": "mobile_app",
-  "displayName": "mobile_app"
+  "slug": "mobile_app",
+  "version": "1.0.0"
 }
