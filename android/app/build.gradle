@@ -2,6 +2,8 @@ apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -77,13 +79,16 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.mobile_app"
+    namespace "thongdn.template_mobile_app"
     defaultConfig {
-        applicationId "com.mobile_app"
+        applicationId "thongdn.template_mobile_app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode project.env.get("VERSION_CODE")?.toInteger() ?: 1
+        versionName project.env.get("VERSION_NAME") ?: "1.0.0"
+
+        resValue "string", "build_config_package", "thongdn.template_mobile_app"
+        resValue "string", "app_name", project.env.get("APP_NAME") ?: "Mobile App"
     }
     signingConfigs {
         debug {

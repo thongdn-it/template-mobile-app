@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  mobile_app
+//
+//  Created by Thong Dang on 20/3/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include? "tmp.xcconfig"

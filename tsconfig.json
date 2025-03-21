@@ -4,8 +4,12 @@
     "paths": {
       "@/*": ["./*"],
       "@src/*": ["./src/*"],
-      "@hooks": ["./src/presentation/hooks"],
-      "@components": ["./src/presentation/components"]
+      "@components": ["./src/components"],
+      "@data": ["./src/data"],
+      "@hooks": ["./src/hooks"],
+      "@pages": ["./src/pages"],
+      "@themes": ["./src/themes"],
+      "@utils": ["./src/utils"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "nativewind-env.d.ts"],

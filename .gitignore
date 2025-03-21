@@ -21,6 +21,8 @@ DerivedData
 *.ipa
 *.xcuserstate
 **/.xcode.env.local
+# react-native-config codegen
+ios/tmp.xcconfig
 
 # Android/IntelliJ
 #
