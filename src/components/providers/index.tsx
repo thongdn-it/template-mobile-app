@@ -1,4 +1,5 @@
 import { KeyboardProvider } from 'react-native-keyboard-controller';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { ThemeProvider } from './ThemeProvider';
 import { QueryProvider } from './QueryProvider';
@@ -10,12 +11,14 @@ export const AppProvider = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <KeyboardProvider>
-      <LanguageProvider>
-        <ThemeProvider>
-          <QueryProvider>{children}</QueryProvider>
-        </ThemeProvider>
-      </LanguageProvider>
-    </KeyboardProvider>
+    <GestureHandlerRootView>
+      <KeyboardProvider>
+        <LanguageProvider>
+          <ThemeProvider>
+            <QueryProvider>{children}</QueryProvider>
+          </ThemeProvider>
+        </LanguageProvider>
+      </KeyboardProvider>
+    </GestureHandlerRootView>
   );
 };
