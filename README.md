@@ -49,9 +49,9 @@
 │   ├── /welcome
 │       ├── controller.ts          # Business logic
 │       ├── page.tsx               # UI implementation
+│   /services              # API services, Firebase integration, GraphQL, etc.
 │   /themes                # Theme config
 │   /utils                 # Utility functions
-│   /services              # API services, Firebase integration, GraphQL, etc.
 ...
 ```
 

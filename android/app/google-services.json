@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994996719647",
+    "project_id": "thongdn-template-projects",
+    "storage_bucket": "thongdn-template-projects.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994996719647:android:78901214c1cd58d0cc452a",
+        "android_client_info": {
+          "package_name": "thongdn.template_mobile_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1RBKk5sxkF4UE5TN4reNf0tfI9v3LkrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

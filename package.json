@@ -5,7 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "pod:install": "cd ios && pod install && cd ..",
+    "pod:install": "export USE_FRAMEWORKS=static && cd ios && pod install && cd ..",
     "pod:deintegrate": "cd ios && pod deintegrate && rm -rf Pods Podfile.lock && cd ..",
     "lint": "eslint .",
     "start": "react-native start",
@@ -26,6 +26,8 @@
     "@gluestack-ui/toast": "^1.0.9",
     "@react-native-async-storage/async-storage": "^2.1.2",
     "@react-native-community/netinfo": "^11.4.1",
+    "@react-native-firebase/analytics": "^21.12.0",
+    "@react-native-firebase/app": "^21.12.0",
     "@react-navigation/bottom-tabs": "^7.3.1",
     "@react-navigation/elements": "^2.2.8",
     "@react-navigation/native": "^7.0.17",

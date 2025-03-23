@@ -1,3 +1,5 @@
+import './logger';
+
 export { default as BaseClient } from './client';
 
 export * from './date';

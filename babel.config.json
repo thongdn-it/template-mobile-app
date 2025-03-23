@@ -12,6 +12,7 @@
           "@data": "./src/data",
           "@hooks": "./src/hooks",
           "@pages": "./src/pages",
+          "@services": "./src/services",
           "@themes": "./src/themes",
           "@utils": "./src/utils"
         }
