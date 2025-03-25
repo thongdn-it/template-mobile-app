@@ -1,36 +1,29 @@
 import '@/global.css';
-import '@src/utils/i18n';
+import '@utils';
 
 import React from 'react';
 import { StatusBar } from 'react-native';
 
+import { SplashPage } from '@pages';
 import AppNavigator from './app-nav';
-import { analytics } from '@services';
+import { useTheme } from '@hooks';
 import { navigationTheme } from '@themes';
 import { AppProvider } from '@components';
-import { useScreenTracking, useTheme } from '@hooks';
+import { useAppController } from './app-controller';
 
 function App(): React.JSX.Element {
+  const { isLoggedIn } = useAppController();
+
   const { theme } = useTheme();
   const isDarkMode = theme === 'dark';
 
-  const { navigationRef, onReady, onNavigationStateChange } = useScreenTracking(
-    routeName => {
-      if (routeName) {
-        analytics.logScreenView(routeName);
-      }
-    },
-  );
-
+  if (isLoggedIn === undefined) {
+    return <SplashPage />;
+  }
   return (
     <AppProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppNavigator
-        theme={navigationTheme[theme]}
-        ref={navigationRef}
-        onReady={onReady}
-        onStateChange={onNavigationStateChange}
-      />
+      <AppNavigator theme={navigationTheme[theme]} />
     </AppProvider>
   );
 }

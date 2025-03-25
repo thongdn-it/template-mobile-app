@@ -18,12 +18,18 @@ declare global {
 
 globalThis.log = __DEV__
   ? {
-      e: console.error,
-      i: console.info,
-      l: console.log,
-      w: console.warn,
-      t: console.trace,
-      d: console.debug,
+      e: (message?: any, ...optionalParams: any[]) =>
+        console.error('TDN', message, ...optionalParams),
+      i: (message?: any, ...optionalParams: any[]) =>
+        console.info('TDN', message, ...optionalParams),
+      l: (message?: any, ...optionalParams: any[]) =>
+        console.log('TDN', message, ...optionalParams),
+      w: (message?: any, ...optionalParams: any[]) =>
+        console.warn('TDN', message, ...optionalParams),
+      t: (message?: any, ...optionalParams: any[]) =>
+        console.trace('TDN', message, ...optionalParams),
+      d: (message?: any, ...optionalParams: any[]) =>
+        console.debug('TDN', message, ...optionalParams),
 
       table: console.table,
       group: console.group,
