@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { useHomeController } from './controller';
 import { CoffeeItemView } from './views/coffee-item-view';
-import { Divider, Text, SafeAreaView, FlatList } from '@components';
+import { Divider, Text, FlatList, PageView } from '@components';
 
 const ItemSeparatorComponent = () => <Divider className="my-2" />;
 
@@ -11,7 +11,7 @@ export const ListPage = () => {
   const { data, isLoading } = useHomeController();
 
   return (
-    <SafeAreaView>
+    <PageView>
       {isLoading ? (
         <Text>Loading...</Text>
       ) : (
@@ -27,6 +27,6 @@ export const ListPage = () => {
           )}
         />
       )}
-    </SafeAreaView>
+    </PageView>
   );
 };

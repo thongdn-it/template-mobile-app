@@ -1,14 +1,14 @@
 import { StaticScreenProps } from '@react-navigation/native';
 
 import { CoffeeModel } from '@data';
-import { Text, SafeAreaView, VStack, Image } from '@components';
+import { Text, VStack, Image, PageView } from '@components';
 
 type Props = StaticScreenProps<{
   coffee: CoffeeModel;
 }>;
 export const DetailPage = ({ route }: Props) => {
   return (
-    <SafeAreaView>
+    <PageView>
       <VStack className="items-center m-4 gap-2">
         <Image
           source={{ uri: route.params.coffee.image }}
@@ -20,6 +20,6 @@ export const DetailPage = ({ route }: Props) => {
           {route.params.coffee.description}
         </Text>
       </VStack>
-    </SafeAreaView>
+    </PageView>
   );
 };

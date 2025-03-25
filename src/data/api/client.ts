@@ -1,6 +1,6 @@
 import Config from 'react-native-config';
 
-import BaseClient from '@/src/utils/client';
+import { BaseClient } from '@utils';
 
 export class APIClient extends BaseClient {
   constructor() {

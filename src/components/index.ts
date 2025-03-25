@@ -1,9 +1,11 @@
 export * from './providers';
 
-export * from './shared/scroll-view';
 export * from './shared/flat-list';
+export * from './shared/page-view';
+export * from './shared/scroll-view';
 
 export * from './ui/button';
+export * from './ui/center';
 export * from './ui/divider';
 export * from './ui/gluestack-ui-provider';
 export * from './ui/hstack';
