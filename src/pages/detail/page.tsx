@@ -8,7 +8,9 @@ type Props = StaticScreenProps<{
 }>;
 export const DetailPage = ({ route }: Props) => {
   return (
-    <PageView>
+    <PageView
+      pageName="Detail"
+      attributes={{ coffee_id: route.params.coffee.id.toString() }}>
       <VStack className="items-center m-4 gap-2">
         <Image
           source={{ uri: route.params.coffee.image }}

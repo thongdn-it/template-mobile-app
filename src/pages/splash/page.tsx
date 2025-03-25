@@ -1,8 +1,8 @@
-import { Center, Image, PageView } from '@components';
+import { Center, Image, View } from '@components';
 
 export const SplashPage = () => {
   return (
-    <PageView className="flex-1 bg-white dark:bg-black">
+    <View className="flex-1 bg-white dark:bg-black">
       <Center className="flex-1">
         <Image
           source={require('@assets/bootsplash/logo.png')}
@@ -11,6 +11,6 @@ export const SplashPage = () => {
           height={160}
         />
       </Center>
-    </PageView>
+    </View>
   );
 };

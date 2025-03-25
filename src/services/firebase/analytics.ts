@@ -1,11 +1,18 @@
+import { format } from 'date-fns';
+import { enUS } from 'date-fns/locale';
+import {
+  FirebaseAnalyticsTypes,
+  getAnalytics,
+} from '@react-native-firebase/analytics';
 import DeviceInfo from 'react-native-device-info';
-import { default as RNAnalytics } from '@react-native-firebase/analytics';
+import { ReactNativeFirebase } from '@react-native-firebase/app';
 
-class AnalyticsService {
-  private _analytics = RNAnalytics();
+export class AnalyticsService {
+  private _analytics: FirebaseAnalyticsTypes.Module;
   private _userProperties: { [key: string]: string | null } = {};
 
-  constructor() {
+  constructor(app?: ReactNativeFirebase.FirebaseApp) {
+    this._analytics = getAnalytics(app);
     const appVersion = DeviceInfo.getVersion();
     const buildNumber = DeviceInfo.getBuildNumber();
     const systemName = DeviceInfo.getSystemName();
@@ -53,11 +60,12 @@ class AnalyticsService {
   }
 
   logScreenView(screenName: string, screenClass?: string) {
+    const now = Date.now();
     this._analytics.logScreenView({
       screen_name: screenName,
       screen_class: screenClass ?? screenName,
+      open_day_of_week: format(now, 'EEEE', { locale: enUS }),
+      open_day: format(now, 'yyyy-MM-dd', { locale: enUS }),
     });
   }
 }
-
-export const analytics = new AnalyticsService();

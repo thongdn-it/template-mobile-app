@@ -18,7 +18,7 @@
 | -------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | react-native                     | 0.78.0   | Core framework for building mobile applications                                                                                                        |
 | react                            | 19.0.0   | JavaScript library for building user interfaces                                                                                                        |
-| gluestack-ui                     | v2       | Customizable UI components (`pnpm dlx gluestack-ui add ...`) <br> [Gluestack UI Documentation](https://gluestack.io/ui/docs/components/all-components) |
+| gluestack-ui                     | v2       | Customizable UI components (`yarn dlx gluestack-ui add ...`) <br> [Gluestack UI Documentation](https://gluestack.io/ui/docs/components/all-components) |
 | react-i18next                    | ^15.4.1  | Internationalization framework for React                                                                                                               |
 | date-fns                         | ^4.1.0   | Modern JavaScript date utility library                                                                                                                 |
 | react-native-config              | ^1.5.5   | Environment variable management for React Native                                                                                                       |

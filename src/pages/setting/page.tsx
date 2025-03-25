@@ -22,7 +22,7 @@ export const SettingPage = () => {
     useSettingPageController();
 
   return (
-    <PageView>
+    <PageView pageName="Setting">
       <ScrollView className="px-4">
         <Text>{t('Hello')}</Text>
         <VStack>
