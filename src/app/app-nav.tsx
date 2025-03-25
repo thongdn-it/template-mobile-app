@@ -6,7 +6,8 @@ import { HomeIcon, SettingsIcon } from 'lucide-react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { DetailPage, ListPage, SettingPage } from '@pages';
+import { useAppStore } from '@stores';
+import { DetailPage, ListPage, SettingPage, SignInPage } from '@pages';
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -29,15 +30,33 @@ const HomeTabs = createBottomTabNavigator({
 });
 
 const AppStack = createNativeStackNavigator({
-  initialRouteName: 'Home',
   screens: {
-    Home: {
-      screen: HomeTabs,
-      options: {
-        headerShown: false,
+    // Common screens
+  },
+  groups: {
+    SignedIn: {
+      if: () => useAppStore.getState().isLoggedIn,
+      screens: {
+        Home: {
+          screen: HomeTabs,
+          options: {
+            headerShown: false,
+          },
+        },
+        Detail: DetailPage,
       },
     },
-    Detail: DetailPage,
+    SignedOut: {
+      if: () => !useAppStore.getState().isLoggedIn,
+      screens: {
+        SignIn: {
+          screen: SignInPage,
+          options: {
+            headerShown: false,
+          },
+        },
+      },
+    },
   },
 });
 

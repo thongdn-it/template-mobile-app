@@ -1,6 +1,6 @@
-import { useI18n } from '@/src/hooks';
-import { HStack, Image, Pressable, Text, VStack } from '@components';
-import { CoffeeModel } from '@/src/data/models/coffee';
+import { useI18n } from '@hooks';
+import { CoffeeModel } from '@data';
+import { HStack, Pressable, Text, VStack, Image } from '@components';
 
 export const CoffeeItemView = ({
   coffee,

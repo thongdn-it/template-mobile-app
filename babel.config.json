@@ -8,10 +8,13 @@
         "alias": {
           "@": "./",
           "@src": "./src",
+          "@assets": "./assets",
           "@components": "./src/components",
           "@data": "./src/data",
           "@hooks": "./src/hooks",
           "@pages": "./src/pages",
+          "@services": "./src/services",
+          "@stores": "./src/stores",
           "@themes": "./src/themes",
           "@utils": "./src/utils"
         }

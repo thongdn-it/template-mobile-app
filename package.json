@@ -5,13 +5,13 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "pod:install": "cd ios && pod install && cd ..",
+    "pod:install": "USE_FRAMEWORKS=static && cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install && cd ..",
     "pod:deintegrate": "cd ios && pod deintegrate && rm -rf Pods Podfile.lock && cd ..",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "clear": "rm -rf node_modules pnpm-lock.yaml",
-    "clear:ios": "pnpm pod:deintegrate"
+    "clear": "rm -rf node_modules yarn.lock",
+    "clear:ios": "yarn pod:deintegrate"
   },
   "dependencies": {
     "@gluestack-ui/button": "^1.0.14",
@@ -42,17 +42,21 @@
     "nativewind": "^4.1.23",
     "qs": "^6.14.0",
     "react": "19.0.0",
+    "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",
     "react-native": "0.78.0",
+    "react-native-bootsplash": "^6.3.4",
     "react-native-config": "^1.5.5",
     "react-native-device-info": "^14.0.4",
     "react-native-gesture-handler": "^2.24.0",
     "react-native-keyboard-controller": "^1.16.8",
+    "react-native-mmkv": "^3.2.0",
     "react-native-reanimated": "^3.17.1",
     "react-native-safe-area-context": "^5.3.0",
     "react-native-screens": "^4.9.2",
     "react-native-svg": "^15.11.2",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
@@ -69,6 +73,7 @@
     "@types/jest": "^29.5.14",
     "@types/qs": "^6.9.18",
     "@types/react": "^19.0.10",
+    "@types/react-dom": "^19",
     "@types/react-test-renderer": "^19.0.0",
     "babel-plugin-module-resolver": "^5.0.2",
     "eslint": "^8.19.0",
@@ -80,5 +85,6 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "packageManager": "yarn@4.7.0+sha512.5a0afa1d4c1d844b3447ee3319633797bcd6385d9a44be07993ae52ff4facabccafb4af5dcd1c2f9a94ac113e5e9ff56f6130431905884414229e284e37bb7c9"
 }

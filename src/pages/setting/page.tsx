@@ -1,23 +1,28 @@
-import { SafeAreaView } from 'react-native';
+import { Alert } from 'react-native';
 
 import { format } from 'date-fns';
-import { useI18n, useTheme } from '@hooks';
-import { ScrollView, Text, VStack, HStack, Switch } from '@components';
+
+import {
+  ScrollView,
+  Text,
+  VStack,
+  HStack,
+  Switch,
+  Button,
+  ButtonText,
+  PageView,
+} from '@components';
+import { useI18n } from '@hooks';
+import { useSettingPageController } from './controller';
 
 export const SettingPage = () => {
-  const {
-    currentLanguage,
-    t,
-    changeLanguage,
-    NumberFormat,
-    PluralRules,
-    Collator,
-  } = useI18n();
+  const { t, NumberFormat, PluralRules, Collator } = useI18n();
 
-  const { theme, setTheme } = useTheme();
+  const { isDarkMode, currentLanguage, changeTheme, changeLanguage, signOut } =
+    useSettingPageController();
 
   return (
-    <SafeAreaView>
+    <PageView>
       <ScrollView className="px-4">
         <Text>{t('Hello')}</Text>
         <VStack>
@@ -41,13 +46,7 @@ export const SettingPage = () => {
         </VStack>
         <HStack className={'items-center gap-4 mt-4'}>
           <Text>{t('change-theme', { ns: 'buttons' })}</Text>
-          <Switch
-            size="md"
-            value={theme === 'dark'}
-            onToggle={() => {
-              setTheme(theme === 'dark' ? 'light' : 'dark');
-            }}
-          />
+          <Switch size="md" value={isDarkMode} onToggle={changeTheme} />
         </HStack>
         <HStack className={'items-center gap-4 mt-4'}>
           <Text>{t('change-language', { ns: 'buttons' })}</Text>
@@ -60,7 +59,21 @@ export const SettingPage = () => {
             }}
           />
         </HStack>
+        <Button
+          className="mt-6"
+          onPress={() => {
+            Alert.alert('SignOut', 'Are you sure?', [
+              {
+                text: 'Cancel',
+                onPress: () => {},
+                style: 'cancel',
+              },
+              { text: 'OK', onPress: signOut },
+            ]);
+          }}>
+          <ButtonText>SignOut</ButtonText>
+        </Button>
       </ScrollView>
-    </SafeAreaView>
+    </PageView>
   );
 };

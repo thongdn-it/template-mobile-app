@@ -9,22 +9,26 @@
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		5039FAAED0185B6AA6E8E4E7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		6F93EF3C14BFBEE51885A2BE /* libPods-mobile_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEFAB860CF4C697A5FD8AC2 /* libPods-mobile_app.a */; };
+		6687F1A1A8784C0A8BE8A0D6 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3A6C18B5404B199A8FC7B7 /* BootSplash.storyboard */; };
+		6E8FF786E230D4F09CC60572 /* Pods_mobile_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA515A66BAAC697243E02ECB /* Pods_mobile_app.framework */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		FA098A3F109D40558DF9F1B9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689A6ED3A9A74C2E99A5E9D6 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13B07F961A680F5B00A75B9A /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Mobile App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = mobile_app/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = mobile_app/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = mobile_app/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3CEFAB860CF4C697A5FD8AC2 /* libPods-mobile_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mobile_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3A6C18B5404B199A8FC7B7 /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = mobile_app/BootSplash.storyboard; sourceTree = "<group>"; };
 		45A777D62D8BEDE1008B3AFE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		4DAB08DF4EFFFA3BB7223943 /* Pods-mobile_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile_app.debug.xcconfig"; path = "Target Support Files/Pods-mobile_app/Pods-mobile_app.debug.xcconfig"; sourceTree = "<group>"; };
+		68717E51A1DFD0B9BCFD55EF /* Pods-mobile_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile_app.release.xcconfig"; path = "Target Support Files/Pods-mobile_app/Pods-mobile_app.release.xcconfig"; sourceTree = "<group>"; };
+		689A6ED3A9A74C2E99A5E9D6 /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = mobile_app/Colors.xcassets; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = mobile_app/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = mobile_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A57EF07E1C4A125C336FA6CA /* Pods-mobile_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile_app.release.xcconfig"; path = "Target Support Files/Pods-mobile_app/Pods-mobile_app.release.xcconfig"; sourceTree = "<group>"; };
+		C9DAD32E49578436BFE1A9FF /* Pods-mobile_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile_app.debug.xcconfig"; path = "Target Support Files/Pods-mobile_app/Pods-mobile_app.debug.xcconfig"; sourceTree = "<group>"; };
+		CA515A66BAAC697243E02ECB /* Pods_mobile_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mobile_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -33,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F93EF3C14BFBEE51885A2BE /* libPods-mobile_app.a in Frameworks */,
+				6E8FF786E230D4F09CC60572 /* Pods_mobile_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +52,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				2D3A6C18B5404B199A8FC7B7 /* BootSplash.storyboard */,
+				689A6ED3A9A74C2E99A5E9D6 /* Colors.xcassets */,
 			);
 			name = mobile_app;
 			sourceTree = "<group>";
@@ -56,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				3CEFAB860CF4C697A5FD8AC2 /* libPods-mobile_app.a */,
+				CA515A66BAAC697243E02ECB /* Pods_mobile_app.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,7 +92,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* .app */,
+				13B07F961A680F5B00A75B9A /* Mobile App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +100,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4DAB08DF4EFFFA3BB7223943 /* Pods-mobile_app.debug.xcconfig */,
-				A57EF07E1C4A125C336FA6CA /* Pods-mobile_app.release.xcconfig */,
+				C9DAD32E49578436BFE1A9FF /* Pods-mobile_app.debug.xcconfig */,
+				68717E51A1DFD0B9BCFD55EF /* Pods-mobile_app.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -107,13 +113,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "mobile_app" */;
 			buildPhases = (
-				C8AAF26C18DC8D25C16D230D /* [CP] Check Pods Manifest.lock */,
+				ADC02F4CED8A26EC9B139AA8 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				470006393FE8735F34EB4332 /* [CP] Embed Pods Frameworks */,
-				237F04CBD506F385714D6956 /* [CP] Copy Pods Resources */,
+				6D60B4CD45F60B2A54D177D6 /* [CP] Embed Pods Frameworks */,
+				A821453A5F1A26986EA6529A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -121,7 +127,7 @@
 			);
 			name = mobile_app;
 			productName = mobile_app;
-			productReference = 13B07F961A680F5B00A75B9A /* .app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Mobile App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,6 +169,8 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				5039FAAED0185B6AA6E8E4E7 /* PrivacyInfo.xcprivacy in Resources */,
+				6687F1A1A8784C0A8BE8A0D6 /* BootSplash.storyboard in Resources */,
+				FA098A3F109D40558DF9F1B9 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,24 +193,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		237F04CBD506F385714D6956 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mobile_app/Pods-mobile_app-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mobile_app/Pods-mobile_app-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mobile_app/Pods-mobile_app-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		470006393FE8735F34EB4332 /* [CP] Embed Pods Frameworks */ = {
+		6D60B4CD45F60B2A54D177D6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,7 +210,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mobile_app/Pods-mobile_app-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C8AAF26C18DC8D25C16D230D /* [CP] Check Pods Manifest.lock */ = {
+		A821453A5F1A26986EA6529A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mobile_app/Pods-mobile_app-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mobile_app/Pods-mobile_app-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mobile_app/Pods-mobile_app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC02F4CED8A26EC9B139AA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,7 +265,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DAB08DF4EFFFA3BB7223943 /* Pods-mobile_app.debug.xcconfig */;
+			baseConfigurationReference = C9DAD32E49578436BFE1A9FF /* Pods-mobile_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -286,7 +294,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A57EF07E1C4A125C336FA6CA /* Pods-mobile_app.release.xcconfig */;
+			baseConfigurationReference = 68717E51A1DFD0B9BCFD55EF /* Pods-mobile_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -361,6 +369,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -435,6 +454,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
