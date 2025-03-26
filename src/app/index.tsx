@@ -4,6 +4,8 @@ import '@utils';
 import React from 'react';
 import { StatusBar } from 'react-native';
 
+import codePush from '@revopush/react-native-code-push';
+
 import { SplashPage } from '@pages';
 import AppNavigator from './app-nav';
 import { useTheme } from '@hooks';
@@ -28,4 +30,4 @@ function App(): React.JSX.Element {
   );
 }
 
-export default App;
+export default codePush(App);

@@ -1,3 +1,5 @@
+import { getVersion, getBuildNumber } from 'react-native-device-info';
+
 import { Locale } from '@utils';
 import { useAppStore } from '@stores';
 import { useI18n, useTheme } from '@hooks';
@@ -21,6 +23,8 @@ export const useSettingPageController = () => {
   };
 
   return {
+    version: getVersion(),
+    buildNumber: getBuildNumber(),
     currentLanguage,
     isDarkMode: theme === 'dark',
     changeTheme,
