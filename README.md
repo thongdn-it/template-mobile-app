@@ -11,6 +11,7 @@
 - Enhanced keyboard control with react-native-keyboard-controller.
 - Local data storage with MMKV.
 - State management using Zustand.
+- OTA with [Revopush](https://docs.revopush.org/intro/getting-started).
 
 ## Tech Stack
 

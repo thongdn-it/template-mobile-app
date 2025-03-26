@@ -11,7 +11,9 @@
     "start": "react-native start",
     "test": "jest",
     "clear": "rm -rf node_modules yarn.lock",
-    "clear:ios": "yarn pod:deintegrate"
+    "clear:ios": "yarn pod:deintegrate",
+    "revopush:android": "revopush release-react template-mobile-app android -d Staging -t \"$(grep REVOPUSH_TARGET_VERION .env | cut -d '=' -f2-)\" --description \"Android: description...\"",
+    "revopush:ios": "revopush release-react template-mobile-app ios -d Staging -t $(grep REVOPUSH_TARGET_VERION .env | cut -d '=' -f2-) --description \"iOS: description...\""
   },
   "dependencies": {
     "@gluestack-ui/button": "^1.0.14",

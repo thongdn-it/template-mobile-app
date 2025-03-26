@@ -12,6 +12,7 @@ export const ListPage = () => {
 
   return (
     <PageView>
+      <Text>Revopush v5 Check target version</Text>
       {isLoading ? (
         <Text>Loading...</Text>
       ) : (
