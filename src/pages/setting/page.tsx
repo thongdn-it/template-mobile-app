@@ -18,8 +18,15 @@ import { useSettingPageController } from './controller';
 export const SettingPage = () => {
   const { t, NumberFormat, PluralRules, Collator } = useI18n();
 
-  const { isDarkMode, currentLanguage, changeTheme, changeLanguage, signOut } =
-    useSettingPageController();
+  const {
+    version,
+    buildNumber,
+    isDarkMode,
+    currentLanguage,
+    changeTheme,
+    changeLanguage,
+    signOut,
+  } = useSettingPageController();
 
   return (
     <PageView pageName="Setting">
@@ -59,8 +66,11 @@ export const SettingPage = () => {
             }}
           />
         </HStack>
+        <Text className="mt-6 text-center">
+          version: {version} ({buildNumber})
+        </Text>
         <Button
-          className="mt-6"
+          className="mt-4"
           onPress={() => {
             Alert.alert('SignOut', 'Are you sure?', [
               {

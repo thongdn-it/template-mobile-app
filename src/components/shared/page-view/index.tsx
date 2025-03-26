@@ -4,7 +4,8 @@ import React, { forwardRef, useEffect } from 'react';
 import { ViewProps } from 'react-native';
 
 import { firebase } from '@services';
-import { SafeAreaView, View } from '@components';
+import { View } from '../../ui/view';
+import { SafeAreaView } from '../../ui/safe-area-view';
 
 type Props = ViewProps & {
   safeArea?: boolean;

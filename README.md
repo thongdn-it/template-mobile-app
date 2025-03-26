@@ -11,6 +11,7 @@
 - Enhanced keyboard control with react-native-keyboard-controller.
 - Local data storage with MMKV.
 - State management using Zustand.
+- OTA with [Revopush](https://docs.revopush.org/intro/getting-started). _Note: Replace `REVOPUSH_APP_NAME`, `REPLACE_REVOPUSH_KEY_HERE` with your revopush configuration_
 
 ## Tech Stack
 
@@ -71,7 +72,8 @@ This template is developed by Thong Dang. You can contact me at thongdn.it@gmail
 If you like my project, you can [support me][buy_me_a_coffee_url] or star (like) for it.
 
 <p align="center">
-<img src="https://media.giphy.com/media/hXMGQqJFlIQMOjpsKC/giphy.gif" alt="template-mobile-app-buy-me-a-coffee" style="aspect-ratio:385/405;" width="200"></p>
+    <img src="https://media.giphy.com/media/hXMGQqJFlIQMOjpsKC/giphy.gif" alt="template-mobile-app-buy-me-a-coffee" style="aspect-ratio:385/405;" width="200" />
+</p>
 
 [//]: # 'reference links'
 [buy_me_a_coffee_image_url]: https://media.giphy.com/media/hXMGQqJFlIQMOjpsKC/giphy.gif

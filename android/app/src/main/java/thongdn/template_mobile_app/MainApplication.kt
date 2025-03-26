@@ -12,6 +12,8 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
 
+import com.microsoft.codepush.react.CodePush
+
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost =
@@ -22,7 +24,11 @@ class MainApplication : Application(), ReactApplication {
               // add(MyReactNativePackage())
             }
 
-        override fun getJSMainModuleName(): String = "index"
+          override fun getJSMainModuleName(): String = "index"
+
+          override fun getJSBundleFile(): String {
+          return CodePush.getJSBundleFile()
+      }
 
         override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
 

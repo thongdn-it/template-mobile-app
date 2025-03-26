@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">mobile_app</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">REPLACE_REVOPUSH_KEY_HERE</string>
 </resources>
