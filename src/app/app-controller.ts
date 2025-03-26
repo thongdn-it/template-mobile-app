@@ -8,6 +8,7 @@ import {
   GlobalCacheKeys,
   UserCacheKeys,
 } from '@data';
+import { firebase } from '@services';
 import { useAppStore } from '@stores';
 
 export const useAppController = () => {
@@ -15,6 +16,7 @@ export const useAppController = () => {
 
   useEffect(() => {
     const init = async () => {
+      await firebase.messaging.requestPermission();
       const result = await checkIsLoggedIn();
       setIsLoggedIn(result);
     };

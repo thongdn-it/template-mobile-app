@@ -6,10 +6,11 @@ import { StatusBar } from 'react-native';
 
 import { SplashPage } from '@pages';
 import AppNavigator from './app-nav';
-import { useTheme } from '@hooks';
+import { firebase } from '@services';
 import { navigationTheme } from '@themes';
 import { AppProvider } from '@components';
 import { useAppController } from './app-controller';
+import { useScreenTracking, useTheme } from '@hooks';
 
 function App(): React.JSX.Element {
   const { isLoggedIn } = useAppController();
@@ -17,13 +18,27 @@ function App(): React.JSX.Element {
   const { theme } = useTheme();
   const isDarkMode = theme === 'dark';
 
+  const { navigationRef, onReady, onNavigationStateChange } = useScreenTracking(
+    routeName => {
+      if (routeName) {
+        firebase.analytics.logScreenView(routeName);
+      }
+    },
+  );
+
   if (isLoggedIn === undefined) {
     return <SplashPage />;
   }
+
   return (
     <AppProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppNavigator theme={navigationTheme[theme]} />
+      <AppNavigator
+        theme={navigationTheme[theme]}
+        ref={navigationRef}
+        onReady={onReady}
+        onStateChange={onNavigationStateChange}
+      />
     </AppProvider>
   );
 }

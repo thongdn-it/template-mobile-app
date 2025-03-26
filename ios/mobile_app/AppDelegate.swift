@@ -3,6 +3,7 @@ import React
 import React_RCTAppDelegate
 import ReactAppDependencyProvider
 
+import FirebaseCore
 import RNBootSplash
 
 @main
@@ -15,6 +16,8 @@ class AppDelegate: RCTAppDelegate {
     // They will be passed down to the ViewController used by React Native.
     self.initialProps = [:]
 
+    FirebaseApp.configure()
+    
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 

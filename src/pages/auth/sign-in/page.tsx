@@ -11,7 +11,7 @@ export const SignInPage = () => {
   };
 
   return (
-    <PageView>
+    <PageView pageName="SignIn">
       <Center className="flex-1">
         <Image
           source={require('@assets/bootsplash/logo.png')}

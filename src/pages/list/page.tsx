@@ -11,7 +11,7 @@ export const ListPage = () => {
   const { data, isLoading } = useHomeController();
 
   return (
-    <PageView>
+    <PageView pageName="List">
       {isLoading ? (
         <Text>Loading...</Text>
       ) : (
