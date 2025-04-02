@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { useAppStore } from '@stores';
-import { DetailPage, ListPage, SettingPage, SignInPage } from '@pages';
+import { DetailPage, ListPage, SettingPage, SignInPage } from '@screens';
 
 const HomeTabs = createBottomTabNavigator({
   screens: {

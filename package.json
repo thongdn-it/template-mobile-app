@@ -44,7 +44,7 @@
     "react": "19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",
-    "react-native": "0.78.0",
+    "react-native": "~0.78.0",
     "react-native-bootsplash": "^6.3.4",
     "react-native-config": "^1.5.5",
     "react-native-device-info": "^14.0.4",

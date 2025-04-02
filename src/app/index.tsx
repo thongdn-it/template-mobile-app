@@ -1,12 +1,12 @@
-import '@/global.css';
 import '@utils';
+import '@/global.css';
 
 import React from 'react';
 import { StatusBar } from 'react-native';
 
-import { SplashPage } from '@pages';
-import AppNavigator from './app-nav';
 import { useTheme } from '@hooks';
+import AppNavigator from './app-nav';
+import { SplashPage } from '@screens';
 import { navigationTheme } from '@themes';
 import { AppProvider } from '@components';
 import { useAppController } from './app-controller';

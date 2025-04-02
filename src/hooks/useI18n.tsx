@@ -1,15 +1,13 @@
 import React from 'react';
 
-import {
-  useTranslation as useI18nTranslation,
-  UseTranslationOptions,
-} from 'react-i18next';
 import { TOptionsBase } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import IntlPluralRules from 'intl-pluralrules/plural-rules';
 
-import { i18n, setDateLocale, Locale, Namespace } from '@utils';
+import { setDateLocale, Locale, Namespace } from '@utils';
 
 export const useI18n = () => {
+  const { t: tI18n, i18n, ready } = useTranslation();
   const [language, setLanguage] = React.useState<Locale>(
     i18n.language as Locale,
   );
@@ -28,14 +26,7 @@ export const useI18n = () => {
         })
       | undefined,
   ) => {
-    return i18n.t(key, options);
-  };
-
-  const useTranslation = (
-    ns?: Namespace,
-    options?: UseTranslationOptions<undefined> | undefined,
-  ) => {
-    return useI18nTranslation(ns, options);
+    return tI18n(key, options);
   };
 
   const NumberFormat = (options?: Intl.NumberFormatOptions) => {
@@ -52,9 +43,10 @@ export const useI18n = () => {
 
   return {
     currentLanguage: language,
+    i18n,
+    ready,
     t,
     changeLanguage,
-    useTranslation,
 
     /**
      * The Intl.NumberFormat object enables language-sensitive number formatting.
