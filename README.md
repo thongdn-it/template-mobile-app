@@ -7,7 +7,7 @@
 - Internationalization using i18next.
 - Environment variable configuration (.env).
 - Navigation with react-navigation.
-- HTTP client integration with Axios and TanStack Query.
+- HTTP client integration with Axios and TanStack Query. (demo using RESTful API from https://sampleapis.com).
 - Enhanced keyboard control with react-native-keyboard-controller.
 - Local data storage with MMKV.
 - State management using Zustand.
@@ -50,7 +50,7 @@
 │   ├── /cache                 # Data caching logic
 │   ├── /queries               # TanStack Query logic
 │   /hooks                 # Custom hooks
-│   /pages                 # Application pages
+│   /screens                 # Application screens | Features
 │   ├── /welcome
 │       ├── controller.ts          # Business logic
 │       ├── page.tsx               # UI implementation

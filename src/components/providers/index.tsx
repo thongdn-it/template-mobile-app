@@ -13,11 +13,11 @@ export const AppProvider = ({
   return (
     <GestureHandlerRootView>
       <KeyboardProvider>
-        <LanguageProvider>
-          <ThemeProvider>
+        <ThemeProvider>
+          <LanguageProvider>
             <QueryProvider>{children}</QueryProvider>
-          </ThemeProvider>
-        </LanguageProvider>
+          </LanguageProvider>
+        </ThemeProvider>
       </KeyboardProvider>
     </GestureHandlerRootView>
   );

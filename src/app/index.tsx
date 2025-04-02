@@ -1,14 +1,14 @@
-import '@/global.css';
 import '@utils';
+import '@/global.css';
 
 import React from 'react';
 import { StatusBar } from 'react-native';
 
 import codePush from '@revopush/react-native-code-push';
 
-import { SplashPage } from '@pages';
-import AppNavigator from './app-nav';
 import { firebase } from '@services';
+import AppNavigator from './app-nav';
+import { SplashPage } from '@screens';
 import { navigationTheme } from '@themes';
 import { AppProvider } from '@components';
 import { useAppController } from './app-controller';
