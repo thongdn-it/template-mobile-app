@@ -11,25 +11,26 @@
 - Enhanced keyboard control with react-native-keyboard-controller.
 - Local data storage with MMKV.
 - State management using Zustand.
+- Forms with validation (React Hook Form vs Zod).
 - OTA with [Revopush](https://docs.revopush.org/intro/getting-started). _Note: Replace `REVOPUSH_APP_NAME`, `REPLACE_REVOPUSH_KEY_HERE` with your revopush configuration_
 
 ## Tech Stack
 
-| Library                          | Version  | Description                                                                                                                                            |
-| -------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| react-native                     | 0.78.0   | Core framework for building mobile applications                                                                                                        |
-| react                            | 19.0.0   | JavaScript library for building user interfaces                                                                                                        |
-| gluestack-ui                     | v2       | Customizable UI components (`yarn dlx gluestack-ui add ...`) <br> [Gluestack UI Documentation](https://gluestack.io/ui/docs/components/all-components) |
-| react-i18next                    | ^15.4.1  | Internationalization framework for React                                                                                                               |
-| date-fns                         | ^4.1.0   | Modern JavaScript date utility library                                                                                                                 |
-| react-native-config              | ^1.5.5   | Environment variable management for React Native                                                                                                       |
-| react-navigation                 | ^7.0.17  | Routing and navigation for React Native                                                                                                                |
-| lucide-react-native              | ^0.483.0 | Icon library for React Native                                                                                                                          |
-| axios                            | ^1.8.4   | HTTP client for making API requests                                                                                                                    |
-| @tanstack/react-query            | ^5.69.0  | Powerful data fetching and caching library                                                                                                             |
-| react-native-keyboard-controller | ^1.16.8  | Enhances keyboard control and management for React Native                                                                                              |
-| react-native-mmkv                | ^3.2.0   | Local storage solution for React Native                                                                                                                |
-| zustand                          | ^5.0.3   | State management library                                                                                                                               |
+| Library                          | Version  | Description                                                                                                                                                   |
+| -------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| react-native                     | 0.78.0   | Core framework for building mobile applications                                                                                                               |
+| react                            | 19.0.0   | JavaScript library for building user interfaces                                                                                                               |
+| gluestack-ui                     | v2       | Customizable UI components (`yarn dlx gluestack-ui@0.7.13 add ...`) <br> [Gluestack UI Documentation](https://gluestack.io/ui/docs/components/all-components) |
+| react-i18next                    | ^15.4.1  | Internationalization framework for React                                                                                                                      |
+| date-fns                         | ^4.1.0   | Modern JavaScript date utility library                                                                                                                        |
+| react-native-config              | ^1.5.5   | Environment variable management for React Native                                                                                                              |
+| react-navigation                 | ^7.0.17  | Routing and navigation for React Native                                                                                                                       |
+| lucide-react-native              | ^0.483.0 | Icon library for React Native                                                                                                                                 |
+| axios                            | ^1.8.4   | HTTP client for making API requests                                                                                                                           |
+| @tanstack/react-query            | ^5.69.0  | Powerful data fetching and caching library                                                                                                                    |
+| react-native-keyboard-controller | ^1.16.8  | Enhances keyboard control and management for React Native                                                                                                     |
+| react-native-mmkv                | ^3.2.0   | Local storage solution for React Native                                                                                                                       |
+| zustand                          | ^5.0.3   | State management library                                                                                                                                      |
 
 ## Folder Structure
 
