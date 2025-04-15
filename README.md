@@ -12,6 +12,7 @@
 - Local data storage with MMKV.
 - State management using Zustand.
 - Forms with validation (React Hook Form vs Zod).
+- [Custom Fonts](#add-custom-font-to-project).
 
 ## Tech Stack
 
@@ -61,6 +62,115 @@
 ...
 ```
 
+## Add Custom Font To Project
+
+### iOS
+
+1. Copy font files to assets folder (assets/fonts).
+
+2. Add react-native.config.js.
+
+```js
+module.exports = {
+  iosAssets: ['./assets/fonts/'],
+};
+```
+
+3. Run script.
+
+```bash
+npx react-native-asset
+```
+
+### Android
+
+1. Copy font files to `android/app/src/main/res/font`.
+
+2. Run script `fixfonts.sh` in folder (assets/script) to rename font files.
+
+```bash
+./assets/script/fixfonts.sh ./android/app/src/main/res/font
+```
+
+> We must rename the font files following these rules to comply with Android asset names restrictions:
+>
+> - Replace - with \_;
+> - Replace any uppercase letter with its lowercase counterpart.
+
+3. Create the definition file `android/app/src/main/res/font/font_a.xml`
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font app:fontStyle="normal" app:fontWeight="100" app:font="@font/font_a_thin" />
+    <font app:fontStyle="normal" app:fontWeight="200" app:font="@font/font_a_ultralight" />
+    <font app:fontStyle="normal" app:fontWeight="300" app:font="@font/font_a_light" />
+    <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/font_a_regular" />
+    <font app:fontStyle="normal" app:fontWeight="500" app:font="@font/font_a_medium" />
+    <font app:fontStyle="normal" app:fontWeight="600" app:font="@font/font_a_semibold" />
+    <font app:fontStyle="normal" app:fontWeight="700" app:font="@font/font_a_bold" />
+    <font app:fontStyle="normal" app:fontWeight="800" app:font="@font/font_a_heavy" />
+    <font app:fontStyle="normal" app:fontWeight="900" app:font="@font/font_a_black" />
+</font-family>
+```
+
+4. Register the new font in `android/app/src/main/java/thongdn/template_mobile_app/MainApplication.kt`
+
+```diff
+package thongdn.template_mobile_app
+
+import android.app.Application
++++ import com.facebook.react.common.assets.ReactFontManager
+import com.facebook.soloader.SoLoader
+
+class MainApplication : Application(), ReactApplication {
+
+  override fun onCreate() {
+    super.onCreate()
+
++++    // Font Config
++++    ReactFontManager.getInstance().addCustomFont(this, "SF Pro Rounded", R.font.font_a);
+
+    SoLoader.init(this, OpenSourceMergedSoMapping)
+    if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+      // If you opted-in for the New Architecture, we load the native entry point for this app.
+      load()
+    }
+  }
+}
+
+```
+
+### Use Custom Font
+
+```tsx
+<Text
+  style={{
+    fontFamily: 'Font A',
+    fontWeight: 'bold',
+    style: 'normal',
+  }}>
+  Hello world!
+</Text>
+```
+
+### Set Default Font For Tailwind
+
+Define font in `tailwind.config.js`
+
+```js
+ fontFamily: {
+        heading: ['Font A', 'sans-serif'],
+        body: ['Font A', 'sans-serif'],
+        mono: ['Font A', 'sans-serif'],
+        font_a: ['Font A', 'sans-serif'],
+      },
+```
+
+```tsx
+<Text className="font-font_a">Hello world!</Text>
+```
+
 ## License
 
 This repo is open-source and available under the MIT license.
@@ -72,7 +182,8 @@ This template is developed by Thong Dang. You can contact me at thongdn.it@gmail
 If you like my project, you can [support me][buy_me_a_coffee_url] or star (like) for it.
 
 <p align="center">
-<img src="https://media.giphy.com/media/hXMGQqJFlIQMOjpsKC/giphy.gif" alt="template-mobile-app-buy-me-a-coffee" style="aspect-ratio:385/405;" width="200" /></p>
+    <img src="https://media.giphy.com/media/hXMGQqJFlIQMOjpsKC/giphy.gif" alt="template-mobile-app-buy-me-a-coffee" style="aspect-ratio:385/405;" width="200" />
+</p>
 
 [//]: # 'reference links'
 [buy_me_a_coffee_image_url]: https://media.giphy.com/media/hXMGQqJFlIQMOjpsKC/giphy.gif
